@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <h1>Hello World!</h1>
+        <button id="mybutton1">Click me 1</button>
+        <button id="mybutton2">Click me 2</button>
+    </body>
+
+    <script>
+
+        let b1 = document.getElementById("mybutton1");
+        let b2 = document.getElementById("mybutton2");
+
+        b1.addEventListener("click", function(arg1) {
+            let which = arg1.target.id
+            if (which == 'mybutton1') {
+                document.location.href = "http://www.google.com"
+                return
+            } else if (which == 'mybutton2') {
+                document.location.href = "http://www.microsoft.com"
+                return
+            }
+        })
+
+    </script>
+
+</html>
