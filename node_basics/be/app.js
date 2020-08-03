@@ -5,12 +5,12 @@ app.use(cors())
  
 app.get('/students/create', function (req, res) {
   // insert student in database
-  res.code(201).send('Student created')
+  res.status(201).send('Student created')
 })
 
 app.get('/students/delete', function (req, res) {
     // delete student from database
-    res.send('Student delete')
+    res.status(200).send('Student delete')
 })
 
 app.listen(8080)
