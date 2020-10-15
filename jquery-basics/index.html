@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                var onClickHandler = function(e) {
+                    console.log("got clicked")
+                    let id = (e.target.id)
+                    if (id == 'b1') {
+                        console.log('button 1 has been clicked')
+                    }
+                    if (id == 'b2') {
+                        console.log('button 2 has been clicked')
+                    }
+                }
+                $('#b1').on("click", onClickHandler)
+                $('#b2').on("click", onClickHandler)
+            });
+        </script>        
+    </head>
+    <body>
+        <h1>Test</h1>
+        <button id='b1'>My button 1</button>
+        <button id='b2'>My button 2</button>
+    </body>
+    
+</html>
