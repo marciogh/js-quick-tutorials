@@ -1,10 +1,11 @@
 {
   "name": "es-babel",
   "version": "1.0.0",
-  "description": "",
+  "description": "Samples for teaching Javascript basics",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm index.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,8 +15,22 @@
     "@babel/preset-env": "^7.10.4"
   },
   "dependencies": {
+    "connect-ensure-login": "^0.1.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "inquirer": "^7.3.2",
     "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "sequelize": "^6.3.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marciogh/js-quick-tutorials.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/marciogh/js-quick-tutorials/issues"
+  },
+  "homepage": "https://github.com/marciogh/js-quick-tutorials#readme"
 }
