@@ -20,11 +20,13 @@
                     ],
                     series: [
                         {
-                            yAxis: 0,
-                            data: Array.from(Array(5), (x, index) => Math.random() * 10)
+                            name: 'Marcio',
+                            data: Array.from(Array(5), (x, index) => Math.random() * 10),
+                            lineWidth: 5,
+                            dashStyle: 'longdash',
                         },
                         {
-                            yAxis: 0,
+                            name: 'Smith',
                             data: Array.from(Array(5), (x, index) => Math.random() * 10)
                         },
                     ]
