@@ -1,0 +1,41 @@
+<hmtl>
+
+    <head>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const chart = Highcharts.chart('chart1', {
+                    chart: {
+                        type: 'line'
+                    },
+                    title: {
+                        text: 'Line Chart'
+                    },
+                    yAxis: [
+                        {
+                            title: {
+                                text: 'Hops'
+                            },
+                        },
+                    ],
+                    series: [
+                        {
+                            yAxis: 0,
+                            data: Array.from(Array(5), (x, index) => Math.random() * 10)
+                        },
+                        {
+                            yAxis: 0,
+                            data: Array.from(Array(5), (x, index) => Math.random() * 10)
+                        },
+                    ]
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1>HighCharts</h1>
+        <div id="chart1" style="width:600px; height:200px;"></div>
+    </body>
+
+</hmtl>
