@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <button id=right>Right</button>
+        <button id=wrong>Wrong</button>
+    </body>
+    <script>
+        const right = new Audio('right.mp3');
+        const wrong = new Audio('wrong.mp3');
+        document.getElementById('right').addEventListener('click', (e) => {
+            right.play()
+        })
+        document.getElementById('wrong').addEventListener('click', (e) => {
+            wrong.play()
+        })
+    </script>    
+</html>
