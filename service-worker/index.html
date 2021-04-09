@@ -1,0 +1,47 @@
+<html>
+
+<head>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/service-worker/sw.js').then(function (registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function (err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var onClickHandler = function (e) {
+                console.log("got clicked")
+                fetch(
+                    'http://mysafeinfo.com/api/data?list=englishmonarchs&format=json',
+                    {
+                        mode: 'no-cors',
+                        credentials: 'same-origin',
+                        headers: {
+                          'Content-Type': 'application/json'
+                        },                        
+                    }
+                )
+                .then(data => console.log(data)
+                );
+            }
+            $('#b1').on("click", onClickHandler)
+        });
+    </script>
+
+</head>
+
+<body>
+    <h1>Test</h1>
+    <button id='b1'>My button 1</button>
+</body>
+
+</html>
