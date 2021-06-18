@@ -1,6 +1,7 @@
+require('dotenv').config()
 const axios = require('axios');
 
-const api_key = '50e72aad29a69a0904a7d833294adaa6'
+const api_key = process.env.WEATHER_API_KEY
 const url_prefix = 'https://api.openweathermap.org/data/2.5'
 
 async function serial_weather() {
