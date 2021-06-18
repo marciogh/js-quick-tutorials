@@ -19,7 +19,7 @@ async function main() {
     console.log(promise)
     await promise
     console.log(promise)
-    
+
     promises = []
 
     promises.push(randDelay('p1'))
